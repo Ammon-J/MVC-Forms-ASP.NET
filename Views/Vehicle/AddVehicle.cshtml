@@ -1,7 +1,54 @@
 ﻿
 @{
-    ViewData["Title"] = "AddVehicle";
+    ViewData["Title"] = "Add Vehicle";
 }
 
-<h1>AddVehicle</h1>
+<h1>Add Vehicle</h1>
 
+<form action="/">
+    <div class="form-group">
+        <label>Model</label>
+        <input class="form-control" type="text" name="model" />
+    </div>
+    <div class="form-group">
+        <label>Make</label>
+        <input class="form-control" type="text" name="make" />
+    </div>
+    <div class="form-group">
+        <label>Year</label>
+        <input class="form-control" type="text" name="year" />
+    </div>
+    <label>Price</label> <br />
+    <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <span class="input-group-text">0.00</span>
+        <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Fuel Type</label>
+        <select class="form-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">Diesel</option>
+            <option value="2">Gasoline</option>
+            <option value="3">Electric</option>
+        </select>
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Body Type</label>
+        <select class="form-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">Sedan</option>
+            <option value="2">Car</option>
+            <option value="3">Van</option>
+            <option value="4">Truck</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Gas Mileage</label>
+        <input class="form-control" type="text" name="gas-mileage" />
+    </div>
+
+    <input class="btn btn-primary" type="submit" name="addVehicleBTn" value="Add Vehicle" />
+</form>
