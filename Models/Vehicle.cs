@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ModelBinding.Models
+namespace MVCForm.Models
 {
     /// <summary>
     /// Represents a vehicle
