@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using MVCForm.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +10,25 @@ namespace MVCForm.Controllers
 {
     public class VehicleController : Controller
     {
+        [HttpGet] // When user navigates to URL
         public IActionResult AddVehicle()
         {
+            return View();
+        }
+
+        [HttpPost] // Call this add method after user potsts form data
+        public IActionResult AddVehicle(IFormCollection form)
+        {
+            // Add validation
+            Vehicle v = new Vehicle();
+            v.Model = form["model"];
+            v.Make = form["make"];
+            v.Year = Convert.ToDateTime(form["year"]);
+            v.Price = Convert.ToDouble(form["price"]);
+            v.FuelType = form["fuel-type"];
+            v.BodyType = form["body-type"];
+            v.GasMileage = Convert.ToDouble(form["gas-mileage"]);
+
             return View();
         }
     }
