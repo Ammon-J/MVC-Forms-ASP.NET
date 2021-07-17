@@ -20,6 +20,7 @@ namespace MVCForm.Controllers
         public IActionResult AddVehicle(IFormCollection form)
         {
             // Add validation
+
             Vehicle v = new Vehicle();
             v.Model = form["model"];
             v.Make = form["make"];
@@ -36,9 +37,24 @@ namespace MVCForm.Controllers
             return View();
         }
 
+        #region  Same as above but with Model Binding
+        [HttpGet]
         public IActionResult AddWithBinding()
         {
+            
             return View();
         }
+
+        [HttpPost]
+        public IActionResult AddWithBinding(Vehicle v)
+        {
+            if (ModelState.IsValid) // True if data is valid
+            {
+                ViewData["Messege"] = $"{v.Make} {v.Model} was successfully added!";
+            }
+
+            return View();
+        }
+        #endregion
     }
 }
