@@ -51,6 +51,8 @@ namespace MVCForm.Controllers
             if (ModelState.IsValid) // True if data is valid
             {
                 ViewData["Messege"] = $"{v.Make} {v.Model} was successfully added!";
+
+                // Add v to the database
             }
 
             return View();
