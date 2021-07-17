@@ -11,12 +11,12 @@ namespace MVCForm.Models
     public class Vehicle
     {
         /// <summary>
-        /// The company that manufactured the vehicle
+        /// Name of the vehicle 
         /// </summary>
         public string Make { get; set; }
 
         /// <summary>
-        /// Name of the vehicle
+        /// The company that manufactured the vehicle
         /// </summary>
         public string Model { get; set; }
 

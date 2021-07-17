@@ -1,18 +1,19 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Add Vehicle";
 }
 
 <h1>Add Vehicle</h1>
 
-<form action="/">
-    <div class="form-group">
-        <label>Model</label>
-        <input class="form-control" type="text" name="model" />
-    </div>
+@if (ViewData["Added"] == null)
+{
+<form method="post">
     <div class="form-group">
         <label>Make</label>
         <input class="form-control" type="text" name="make" />
+    </div>
+    <div class="form-group">
+        <label>Model</label>
+        <input class="form-control" type="text" name="model" />
     </div>
     <div class="form-group">
         <label>Year</label>
@@ -52,3 +53,9 @@
 
     <input class="btn btn-primary" type="submit" name="addVehicleBTn" value="Add Vehicle" />
 </form>
+}
+
+else
+{
+    <div class="alert alert-success">@ViewData["Added"]</div>
+}

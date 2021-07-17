@@ -1,0 +1,45 @@
+﻿@model Vehicle
+@{
+    ViewData["Title"] = "AddWithBinding";
+}
+
+<h1>Add Vehicle With Model Binding</h1>
+
+<form method="post">
+    <label asp-for="Make"></label>
+    <input class="form-control" asp-for="Make" />
+    <span asp-validation-for="Make"></span>
+    <br />
+
+    <label asp-for="Model"></label>
+    <input class="form-control" asp-for="Model" />
+    <span asp-validation-for="Model"></span>
+    <br />
+
+    <label asp-for="Year"></label>
+    <input class="form-control" asp-for="Year" />
+    <span asp-validation-for="Year"></span>
+    <br />
+
+    <label asp-for="Price"></label>
+    <input class="form-control" asp-for="Price" />
+    <span asp-validation-for="Price"></span>
+    <br />
+
+    <label asp-for="FuelType"></label>
+    <input class="form-control" asp-for="FuelType" />
+    <span asp-validation-for="FuelType"></span>
+    <br />
+
+    <label asp-for="BodyType"></label>
+    <input class="form-control" asp-for="BodyType" />
+    <span asp-validation-for="BodyType"></span>
+    <br />
+
+    <label asp-for="GasMileage"></label>
+    <input class="form-control" asp-for="GasMileage" />
+    <span asp-validation-for="GasMileage"></span>
+    <br />
+
+    <input class="btn btn-primary" type="submit" name="addVehicleBTn" value="Add Vehicle" />
+</form>

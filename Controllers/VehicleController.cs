@@ -29,6 +29,15 @@ namespace MVCForm.Controllers
             v.BodyType = form["body-type"];
             v.GasMileage = Convert.ToDouble(form["gas-mileage"]);
 
+            // Add v to the Database
+
+            ViewData["Added"] = v.Make + " " + v.Model + " has been successfuly added!";
+
+            return View();
+        }
+
+        public IActionResult AddWithBinding()
+        {
             return View();
         }
     }
